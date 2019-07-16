@@ -41,10 +41,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="QLM-a8-l7e" kind="show" identifier="moveToDetail" id="asv-9m-P5R"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrl-5R-iU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="134.59821428571428"/>
+            <point key="canvasLocation" x="1112" y="135"/>
         </scene>
         <!--Add New Photo-->
         <scene sceneID="05C-dh-amk">
@@ -104,6 +107,30 @@
                 <exit id="DSW-Wi-ylz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1844.9275362318842" y="134.59821428571428"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="Fui-Os-3zh">
+            <objects>
+                <viewController id="QLM-a8-l7e" customClass="PhotoDetailViewController" customModule="MinaViewFinder2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MuW-5u-itu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLY-do-9QJ">
+                                <rect key="frame" x="87" y="155" width="240" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uTj-Sh-3dv"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageAppears" destination="TLY-do-9QJ" id="Ukd-Kr-lLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfI-Fd-nT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2611.594202898551" y="134.59821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LAV-K4-Iff">
