@@ -74,6 +74,9 @@
                                 <rect key="frame" x="72" y="609" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="AddNewPhoto:" destination="WRL-h9-GSl" eventType="touchUpInside" id="YF6-ym-drN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foo-4G-fHK">
                                 <rect key="frame" x="256" y="609" width="97" height="30"/>

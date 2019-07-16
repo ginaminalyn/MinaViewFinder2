@@ -11,6 +11,13 @@ import UIKit
 class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePicker = UIImagePickerController()
 
+    @IBAction func AddNewPhoto(_ sender: UIButton) {
+        print("camera tapped")
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
+    }
+   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
