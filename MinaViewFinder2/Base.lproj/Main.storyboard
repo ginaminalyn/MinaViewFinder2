@@ -82,6 +82,9 @@
                                 <rect key="frame" x="256" y="609" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose Photo"/>
+                                <connections>
+                                    <action selector="LibraryTapped:" destination="WRL-h9-GSl" eventType="touchUpInside" id="BeD-73-6IQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
