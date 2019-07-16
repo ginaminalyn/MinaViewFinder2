@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="05C-dh-amk">
             <objects>
-                <viewController id="WRL-h9-GSl" sceneMemberID="viewController">
+                <viewController id="WRL-h9-GSl" customClass="AddPhotoViewController" customModule="MinaViewFinder2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDj-Sa-4yc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
