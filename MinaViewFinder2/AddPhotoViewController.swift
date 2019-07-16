@@ -11,17 +11,38 @@ import UIKit
 class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePicker = UIImagePickerController()
 
-    @IBAction func CameraTapped(_ sender: UIButton) {
-        print("camera tapped")
+
+    @IBAction func CameraTapped(_ sender: Any) {
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
-   
+    
     @IBAction func LibraryTapped(_ sender: UIButton) {
         imagePicker.sourceType = .photoLibrary
         present (imagePicker, animated: true, completion: nil)
     }
     
+    @IBOutlet weak var newImageView: UIImageView!
+    @IBOutlet weak var captionText: UITextField!
+    
+    @IBAction func SaveTapped(_ sender: UIButton) {
+            if let context = (UIApplication.shared.delegate as? AppDelegate)? .persistentContainer.viewContext {
+                let photoToSave = Photos(entity: Photos.entity(), insertInto: context)
+                
+                photoToSave.caption = captionText.text
+        
+                if let userImage = newImageView.image {
+                    if let userImageData = userImage.pngData() {
+                photoToSave.addPhoto = userImageData
+            }
+        }
+                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                
+                navigationController?.popViewController(animated:true)
+        }
+    }
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
